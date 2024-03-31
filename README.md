@@ -10,7 +10,7 @@ results on PartNetE dataset
 </p>
 
 <p align="center">
-<img src="fig/realpc.png" alt="real_pc">
+<img src="fig/realpc.drawio.png" alt="real_pc">
 results on real-world (iPhone-scanned) point clouds
 </p>
 
