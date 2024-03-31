@@ -66,49 +66,30 @@ semantic_seg/: visualization of semantic segmentation results for each part. Col
 `sem_seg_eval.py` provides a script to calculate the mIoUs reported in the paper. 
 
 ## RPSeg Dataset
-You can find the PartNet-Ensembled dataset used in the paper from [here](https://huggingface.co/datasets/minghua/PartSLIP/tree/main/).
+Our dataset comprises 2624 3D objects and over 60k instructions. We use 718 objects and their corresponding instructions as the train set, and the remaining 1906 objects along with their instructions are used for testing. For reliable and fair assessment, we have aligned the 3D objects with those from PartNet-Ensemble \cite{Liu_2023_CVPR}, annotating them with implicit text instructions and using ground truth labels to generate high-quality target masks.
+You can find the dataset used in our paper from [here](https://huggingface.co/datasets/minghua/PartSLIP/tree/main/).
 ```
+train: 
+test:
+Explanatory: 
 PartNetE_meta.json: part names trained and evaluated of all 45 categories.
-split: 
-    - test.txt: list of models used for testing (1,906 models)
-    - few-shot.txt: list of models used for few-shot training (45x8 models)
-    - train.txt: list of models used for training (extra 28k models for some baselines)
-data:
-    - test
-        - Chair
-            - 179
-                - pc.ply: input colored point cloud file
-                - images: rendered images of the 3D mesh, used for generation of the input point cloud (multi-view fusion)
-                - label.npy: ground truth segmentation labels
-                    - semantic_seg: (n,), semantic segmentation labels, 0-indexed, corresponding to the part names in PartNetE_meta.json, -1 indicates not belonging to any parts.
-                    - instance_seg: (n,), instance segmentation labels, 0-indexed, each number indicates a instance, -1 indicates not belonging to any part instances.
-            ...
-        ...
-    - few_shot
+
 ```
-
-## Tips:
-1. We assume dense and colored input point cloud, which is typically available in real-world applications.
-2. You don't need to load the same checkpoints multiple times when batch evaluation.
-3. You can reuse the superpoint results across different evaluations (e.g., zero- and few-shot) for the same input point cloud.
-4. If you find the results unsatisfactory (e.g., when you change the number of input points or change to other datasets), you may want to tune the following paramters:
-
-    a. point cloud rendering: `point_size` in `src/render_pc.py::render_single_view()`. You can change the point size to ensure realistic point cloud renderings.
-
-    b. superpoint generation: `reg` in `src/gen_superpoint.py::gen_superpoint()`. This parameters adjust the granuarlity of the super point generation. You may want to ensure the generated superpoints are not too coarse-grained (e.g., multiple chair legs are not segmented) or fine-grained (e.g., too many small super points).
-
-5.  For zero-shot text prompt, simply concatenating all part names (e.g., "arm, back, seat, leg, wheel") is sometimes better than including the object category as well (e.g., "arm, back, seat, leg, wheel of a chair", used in the paper). The mIoUs are 27.2 and 34.8 in our experiments.
-6.  For zero-shot inference, you can change the prompts without extra training. Whereas for few-shot inference, changing prompts requires retraining.
  
-## Citation
+## Acknowledgements
 
-If you find our code helpful, please cite our paper:
-
+Our work is heavily based on [PartSLIP](https://arxiv.org/abs/2212.01558) and [LISA](https://github.com/dvlab-research/LISA)
 ```
 @article{liu2022partslip,
   title={PartSLIP: Low-Shot Part Segmentation for 3D Point Clouds via Pretrained Image-Language Models},
   author={Liu, Minghua and Zhu, Yinhao and Cai, Hong and Han, Shizhong and Ling, Zhan and Porikli, Fatih and Su, Hao},
   journal={arXiv preprint arXiv:2212.01558},
   year={2022}
+}
+@article{lai2023lisa,
+  title={LISA: Reasoning Segmentation via Large Language Model},
+  author={Lai, Xin and Tian, Zhuotao and Chen, Yukang and Li, Yanwei and Yuan, Yuhui and Liu, Shu and Jia, Jiaya},
+  journal={arXiv preprint arXiv:2308.00692},
+  year={2023}
 }
 ```
