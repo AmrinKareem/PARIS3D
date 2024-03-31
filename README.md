@@ -1,14 +1,10 @@
 # PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model
-This is the official implementation of "PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model".
-
-We propose a model that is capable of segmenting parts of 3D objects based on implicit textual queries and generating natural language explanations corresponding to 3D object segmentation requests. Experiments show that our method achieves competitive performance to models that use explicit queries, with the additional abilities to identify part concepts, reason about them, and complement them with world knowledge.
-
-
 <p align="center">
 <img src="fig/redintro.png" alt="teaser">
 results on PartNetE dataset
 </p>
-
+This is the official implementation of "PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model".
+We propose a model that is capable of segmenting parts of 3D objects based on implicit textual queries and generating natural language explanations corresponding to 3D object segmentation requests. Experiments show that our method achieves competitive performance to models that use explicit queries, with the additional abilities to identify part concepts, reason about them, and complement them with world knowledge.
 <p align="center">
 <img src="fig/realpc.drawio.png" alt="real_pc">
 results on real-world (iPhone-scanned) point clouds
@@ -16,6 +12,10 @@ results on real-world (iPhone-scanned) point clouds
 
 ## Abstract 
 Recent advancements in 3D perception systems have significantly improved their ability to perform visual recognition tasks such as segmentation. However, these systems still heavily rely on explicit human instruction to identify target objects or categories, lacking the capability to actively reason and comprehend implicit user intentions. We introduce a novel segmentation task known as reasoning part segmentation for 3D objects, aiming to output a segmentation mask based on complex and implicit textual queries about specific parts of a 3D object.
+<p align="center">
+<img src="fig/architecturefin.png" alt="teaser">
+results on PartNetE dataset
+</p>
 
 ## Installation
 
