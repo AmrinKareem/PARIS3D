@@ -5,12 +5,12 @@ We propose a model that is capable of segmenting parts of 3D objects based on im
 
 
 <p align="center">
-<img src="fig/teaser.png" alt="teaser">
+<img src="fig/redintro.png" alt="teaser">
 results on PartNetE dataset
 </p>
 
 <p align="center">
-<img src="fig/real_pc.png" alt="real_pc">
+<img src="fig/realpc.png" alt="real_pc">
 results on real-world (iPhone-scanned) point clouds
 </p>
 
