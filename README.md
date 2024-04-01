@@ -1,20 +1,20 @@
 # PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model
 <p align="center">
 <img src="fig/redintro.png" alt="teaser">
-results on PartNetE dataset
+results on RPSeg dataset
 </p>
 This is the official implementation of "PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model".
 We propose a model that is capable of segmenting parts of 3D objects based on implicit textual queries and generating natural language explanations corresponding to 3D object segmentation requests. Experiments show that our method achieves competitive performance to models that use explicit queries, with the additional abilities to identify part concepts, reason about them, and complement them with world knowledge.
 <p align="center">
 <img src="fig/realpc.drawio.png" alt="real_pc">
-results on real-world (iPhone-scanned) point clouds
+results on real-world point clouds
 </p>
 
 ## Abstract 
 Recent advancements in 3D perception systems have significantly improved their ability to perform visual recognition tasks such as segmentation. However, these systems still heavily rely on explicit human instruction to identify target objects or categories, lacking the capability to actively reason and comprehend implicit user intentions. We introduce a novel segmentation task known as reasoning part segmentation for 3D objects, aiming to output a segmentation mask based on complex and implicit textual queries about specific parts of a 3D object.
 <p align="center">
 <img src="fig/architecturefin.png" alt="teaser">
-results on PartNetE dataset
+PARIS3D Architecture
 </p>
 
 ## Installation
@@ -48,7 +48,7 @@ make
 
 ## Quick-Demo
 ### Download pretrained checkpoints
-You can find the pre-trained checkpoint from [here](https://huggingface.co/Amrinkar/PARIS3D).
+You can find the pre-trained checkpoints from [here](https://huggingface.co/Amrinkar/PARIS3D).
 
 ### Inference
 After downloading the checkpoint file, you can use the following command to run inference for them.
@@ -66,19 +66,19 @@ semantic_seg/: visualization of semantic segmentation results for each part. Col
 `sem_seg_eval.py` provides a script to calculate the mIoUs reported in the paper. 
 
 ## RPSeg Dataset
-Our dataset comprises 2624 3D objects and over 60k instructions. We use 718 objects and their corresponding instructions as the train set, and the remaining 1906 objects along with their instructions are used for testing. For reliable and fair assessment, we have aligned the 3D objects with those from PartNet-Ensemble \cite{Liu_2023_CVPR}, annotating them with implicit text instructions and using ground truth labels to generate high-quality target masks.
-You can find the dataset used in our paper from [here](https://huggingface.co/datasets/minghua/PartSLIP/tree/main/).
+Our dataset comprises 2624 3D objects and over 60k instructions. We use 718 objects and their corresponding instructions as the train set, and the remaining 1906 objects along with their instructions are used for testing. For reliable and fair assessment, we have aligned the 3D objects with those from PartNet-Ensemble, annotating them with implicit text instructions and using ground truth labels to generate high-quality target masks.
+You can find the dataset used in our paper from [here](https://huggingface.co/datasets/Amrinkar/RPSeg).
 ```
-train: 
-test:
-Explanatory: 
+train: This is the reasoning data used for training the model. 
+test: The test data is similar to [PartSLIP](https://arxiv.org/abs/2212.01558) but supported with text instructions.
+Explanatory: A JSON file that supports the training data with detailed explanations.
 PartNetE_meta.json: part names trained and evaluated of all 45 categories.
 
 ```
  
 ## Acknowledgements
 
-Our work is heavily based on [PartSLIP](https://arxiv.org/abs/2212.01558) and [LISA](https://github.com/dvlab-research/LISA)
+Our work is heavily based on [PartSLIP](https://arxiv.org/abs/2212.01558) and [LISA](https://github.com/dvlab-research/LISA). 
 ```
 @article{liu2022partslip,
   title={PartSLIP: Low-Shot Part Segmentation for 3D Point Clouds via Pretrained Image-Language Models},
