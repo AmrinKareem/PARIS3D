@@ -84,17 +84,3 @@ PartNetE_meta.json: part names trained and evaluated of all 45 categories.
 ## Acknowledgements
 
 Our work is heavily based on [PartSLIP](https://arxiv.org/abs/2212.01558) and [LISA](https://github.com/dvlab-research/LISA). 
-```
-@article{liu2022partslip,
-  title={PartSLIP: Low-Shot Part Segmentation for 3D Point Clouds via Pretrained Image-Language Models},
-  author={Liu, Minghua and Zhu, Yinhao and Cai, Hong and Han, Shizhong and Ling, Zhan and Porikli, Fatih and Su, Hao},
-  journal={arXiv preprint arXiv:2212.01558},
-  year={2022}
-}
-@article{lai2023lisa,
-  title={LISA: Reasoning Segmentation via Large Language Model},
-  author={Lai, Xin and Tian, Zhuotao and Chen, Yukang and Li, Yanwei and Yuan, Yuhui and Liu, Shu and Jia, Jiaya},
-  journal={arXiv preprint arXiv:2308.00692},
-  year={2023}
-}
-```
