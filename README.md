@@ -1,6 +1,6 @@
 # PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model
 <p align="center">
-<img src="fig/redintro.png" alt="teaser">
+<img src="https://www.youtube.com/watch?v=aJMQCJJObzU" alt="teaser">
 results on RPSeg dataset
 </p>
 This is the official implementation of "PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model".
