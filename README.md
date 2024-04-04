@@ -26,9 +26,6 @@ PARIS3D Architecture
 ```
 conda env create -f environment.yml
 conda activate paris3d
-```
-### Install LISA
-```
 pip install -r requirements.txt
 pip install flash-attn --no-build-isolation
 ```
