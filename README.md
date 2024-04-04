@@ -1,8 +1,6 @@
 # PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model
-
 <p align="center">
-
-https://github.com/AmrinKareem/PARIS3D/assets/43820644/fd9d403c-3a6b-4a9d-a468-061f4cce8253
+https://github.com/AmrinKareem/PARIS3D/assets/43820644/3a7fc23b-e5d6-4b42-ae9d-252f4dd85976
 
 This is the official implementation of "PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model".
 We propose a model that is capable of segmenting parts of 3D objects based on implicit textual queries and generating natural language explanations corresponding to 3D object segmentation requests. Experiments show that our method achieves competitive performance to models that use explicit queries, with the additional abilities to identify part concepts, reason about them, and complement them with world knowledge.
