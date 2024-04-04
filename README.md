@@ -1,5 +1,4 @@
 # PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model
-<p align="center">
 https://github.com/AmrinKareem/PARIS3D/assets/43820644/3a7fc23b-e5d6-4b42-ae9d-252f4dd85976
 
 This is the official implementation of "PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model".
