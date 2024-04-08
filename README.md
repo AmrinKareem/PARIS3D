@@ -74,7 +74,17 @@ Explanatory: A JSON file that supports the training data with detailed explanati
 PartNetE_meta.json: part names trained and evaluated of all 45 categories.
 
 ```
- 
+If you find our work helpful, please cite:
+```
+@misc{kareem2024paris3d,
+      title={PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model}, 
+      author={Amrin Kareem and Jean Lahoud and Hisham Cholakkal},
+      year={2024},
+      eprint={2404.03836},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
 ## Acknowledgements
 
 Our work is heavily based on [PartSLIP](https://arxiv.org/abs/2212.01558) and [LISA](https://github.com/dvlab-research/LISA). 
