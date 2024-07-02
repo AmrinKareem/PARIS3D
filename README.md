@@ -1,4 +1,6 @@
 # PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model
+
+PARIS3D is accepted to ECCV 2024!
 https://github.com/AmrinKareem/PARIS3D/assets/43820644/3a7fc23b-e5d6-4b42-ae9d-252f4dd85976
 
 This is the official implementation of "PARIS3D: Reasoning-based 3D Part Segmentation Using Large Multimodal Model".
