@@ -91,4 +91,6 @@ If you find our work helpful, please cite:
 ```
 ## Acknowledgements
 
-Our work is heavily based on [PartSLIP](https://arxiv.org/abs/2212.01558) and [LISA](https://github.com/dvlab-research/LISA). 
+Our work is heavily based on [PartSLIP](https://arxiv.org/abs/2212.01558) and [LISA](https://github.com/dvlab-research/LISA).   
+
+This project is partially supported by the Google Research Award "A Climate Change and Sustainability Tailored Arabic LLM". 
